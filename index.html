@@ -9,11 +9,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+      #mc-embedded-subscribe-form{
+          width: 27rem;
+      }
+  </style>
+
+  
+   <style>
+       .fixedButton{
+            position: fixed;
+            bottom: 0px;
+            right: 0px; 
+            padding: 10px;
+        }
+        .roundedFixedBtn{
+          height: 60px;
+          line-height: 80px;  
+          width: 90px;  
+          font-size: 2em;
+          font-weight: bold;
+          border-radius: 5%;
+          background-color: #E5BD14;
+          color: white;
+          text-align: center;
+          cursor: pointer;
+        }
+        
+   </style>
+ 
 </head>
 <body>
-    <section class="hero">
+    <a class="fixedButton animate__animated animate__tada animate__infinite	infinite" >
+        <div class="roundedFixedBtn"><i class="fa fa-phone"></i></div>
+     </a>
+    <section class="hero"  >
         <header>
-            <a class="logo" href="#"><img src="images/Logo.svg" alt=""></a>
+            <a class="logo " href="#"><img src="images/Logo.svg" alt=""></a>
 
             <nav>
                 <ul class="nav-list">
@@ -25,11 +62,12 @@
 
             <img src="images/hamburger.svg" alt="" class="burger">
         </header>
-        <video src="images/Cover.mp4" autoplay muted loop poster>
+        <video src="images/Cover.mp4" id="video1" autoplay muted loop poster>
+            
         </video>
         <div class="hero-container">
 
-            <div class="left">
+            <div class="left"  onmouseover="Play()" onmouseout="Pause()">
                 <h1>Begin your <span>journey</span> with us</h1>
                 <p>Here at Luminous Jobs we are creating a community to bring students and business together.</p>
                 <a href="#signUp" class="hero-cta">Register Here</a>
@@ -44,11 +82,13 @@
 
     <div class="services-container" id="servicesAnchor">
 
-        <div class="services-right">
+        <div class="services-right" data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500">
             <img src="images/Business-support.png" alt="" class="services-img">
         </div>
 
-        <div class="services-left">
+        <div class="services-left " data-aos="fade-up"  data-aos-duration="1500" >
             <h1><span class="yellow">Business</span> Support for SMEs of UK</h1>
             <p>Start building your team from day 1 and work with enthusiastic students around your area. </p>
             <ul class="services-list">
@@ -63,11 +103,12 @@
 
     <div class="services-container reverse">
 
-        <div class="services-right student">
+        <div class="services-right student" data-aos="fade-down"  data-aos-easing="linear"
+        data-aos-duration="1500">
             <img src="images/Student-support.png" alt="" class="services-img">
         </div>
 
-        <div class="services-left">
+        <div class="services-left" data-aos="fade-up"  data-aos-duration="1500">
             <h1><span class="purple">Student</span> support and Internships</h1>
             <p>Find PAID internships with local SMEs near your university in your field of study. Connect with them, form a  network and start building your profile.</p>
             <ul class="services-list">
@@ -86,11 +127,12 @@
 
     <div class="services-container">
 
-        <div class="services-right">
+        <div class="services-right" data-aos="fade-down"  data-aos-easing="linear"
+        data-aos-duration="1500">
             <img src="images/Business1.png" alt="" class="services-img">
         </div>
 
-        <div class="services-left">
+        <div class="services-left" data-aos="fade-up"  data-aos-duration="1500">
             <h1><span class="yellow">Business</span> and Digital Marketing - 1:1 support </h1>
             <p>If you are looking to kickstart your business and wish to create a digital presence, this is what we offer.</p>
             <ul class="services-list">
@@ -109,7 +151,7 @@
     </div>
 
     <section class="sign-up" id="signUp">
-        <div class="form.wrapper">
+        <div class="form.wrapper">  
             <div class="project">
                 <h1>Let's talk about your <span class="purple">next project.</span></h1>
                     <div class="register">
@@ -117,34 +159,53 @@
                         <img src="images/arrow_down.svg" alt="" class="arrow">
                     </div>
             </div>
-            <form action="#">
-                <h3>Sign up with Luminous Jobs</h3>
-    
-                <label for="name">Name:</label>
-                <input type="text" placeholder="Your Name">
-    
-                <label for="email">Email:</label>
-                <input type="text" placeholder="xyz@gmail.com">
-                
-                <div class="wrapper">
-                <input type="checkbox">
-                <label for="student">Student</label>
-    
-                <input type="checkbox">
-                <label for="business">Business</label>
+            <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+            #mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
+            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+              We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+            <form action="https://luminousjobs.us6.list-manage.com/subscribe/post?u=6ea6e4c325d23a07334fde8fe&amp;id=fae8344465" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <h2>Sign up with Luminous Jobs</h2>
+            <div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+            
+            <div class="mc-field-group">
+            <label for="mce-FNAME">Name  <span class="asterisk">*</span>
+            </label>
+            <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+            </div>
+            
+            <div class="mc-field-group">
+            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+            
+            <div class="mc-field-group input-group">
+                <strong>Who you are ? </strong>
+                <ul><li><input type="checkbox" value="1" name="group[55565][1]" id="mce-group[55565]-55565-0"><label for="mce-group[55565]-55565-0">Student</label></li>
+            <li><input type="checkbox" value="2" name="group[55565][2]" id="mce-group[55565]-55565-1"><label for="mce-group[55565]-55565-1">Business</label></li>
+            </ul>
+            </div>
+            <div class="mc-field-group input-group">
+                <strong>* </strong>
+                <ul><li><input type="checkbox" value="4" name="group[55569][4]" id="mce-group[55569]-55569-0"><label for="mce-group[55569]-55569-0">I have read and agreed to terms &amp; conditions</label></li>
+            </ul>
+            </div>
+            <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6ea6e4c325d23a07334fde8fe_fae8344465" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                 </div>
-                
-    
-                <input type="checkbox" class="terms">
-                <label for="terms">I have read and agreed to terms & conditions.</label>
-    
-                <input type="button" value="Join Us">
             </form>
+            </div>
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='FNAME';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
         </div>
-        
-        
     </section>
-
     <footer>
         <div class="container">
             <a href="#"><img class="footer-logo" src="images/Logo.svg" alt=""></a>
@@ -160,5 +221,52 @@
             </p>
         </div>
     </footer>
+
+    <script type="text/javascript" >
+            var myVideo=document.getElementById("video1"); 
+
+                function Pause()
+                { 
+                myVideo.pause(); 
+                }
+                function Play()
+                {
+                if (myVideo.paused) 
+                myVideo.play();     
+            }    
+    </script>
+    <script type="text/javascript">
+        AOS.init();
+
+            // You can also pass an optional settings object
+            // below listed default settings
+                AOS.init({
+                // Global settings:
+                disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+                startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+                initClassName: 'aos-init', // class applied after initialization
+                animatedClassName: 'aos-animate', // class applied on animation
+                useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+                disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+                debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+                throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+                
+
+                // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+                offset: 120, // offset (in px) from the original trigger point
+                delay: 0, // values from 0 to 3000, with step 50ms
+                duration: 400, // values from 0 to 3000, with step 50ms
+                easing: 'ease', // default easing for AOS animations
+                once: false, // whether animation should happen only once - while scrolling down
+                mirror: false, // whether elements should animate out while scrolling past them
+                anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+                });
+
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
